@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Redirect
 } from 'react-router-dom';
 import LoginPage from './components/login'
+import SignUpPage from './components/signup'
 import NotesPage from './containers/notes'
 import { connect } from 'react-redux';
 import Header from './containers/header'
@@ -15,9 +15,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css"></link>
-          <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
           <Route path='/' render={routerProps => <Header {...routerProps}/>} />
+          <Route exact path="/SignUp" render={routerProps => <SignUpPage {...routerProps}/>} />
           <Route exact path="/login" render={routerProps => <LoginPage {...routerProps}/>} />
           {this.props.user.username?
             <Route path="/notes" render={renderProps => <NotesPage {...renderProps} notes={this.props.notes}/>} />

@@ -1,13 +1,70 @@
+html{
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: url(/img/backgroundImage.jpg) repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #ffffff;
+  min-height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+#logo {
+  margin-left: 60px;
+}
+
+#log-in {
+  margin-right: 700px;
+  margin-left: 100px;
+}
+#show-note {
+
+  position: absolute;
+
+}
+
+#note-card {
+  margin-right: 500px;
+  margin-left: 200px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#edit-btn {
+  position: relative;
+  margin-left: 550px;
+  margin-top: -200px;
+}
+form {
+  padding-top: 0px;
+  margin-top:0px;
+  margin-left: 50px;
+  margin-right: 200px;
+}
+
+form button, form h5 {
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #ec407a;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ec407a !important;
 }

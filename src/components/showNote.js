@@ -45,13 +45,14 @@ class NoteShowPage extends Component {
     render() {
         if (this.clickedNote()) {
             return (
-                <div className="ui segment" id="show-note">
+                <div className="card z-depth-0" id="show-note">
                     <h2>{this.clickedNote().title}</h2>
-                    <p className="note-text">{this.clickedNote().innerText}</p>
+                    <p className="note-text">Content: {this.clickedNote().innerText}</p>
                     <p className="tag-text">Tags: {this.joinedTags()}</p>
                     <button id="edit-button" className="ui right floated button" onClick={() => this.props.toggleEdit(this.clickedNote())}>Edit</button>
                     <button id="delete-button" className="ui right floated button" onClick={this.handleDeleteClick}>Delete</button>
                 </div>
+                
             )
         } else {
             return null

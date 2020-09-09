@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { signIn } from "../actions/userActions";
 import { loadNotes } from "../actions/noteActions";
 
-class LoginPage extends Component {
+class SignUp extends Component {
   state = {
     username: "",
   };
@@ -44,7 +44,7 @@ class LoginPage extends Component {
     return (
       <div id="log-in">
         <form  className="container" onSubmit={this.handleOnSubmit}>
-          <h5 className="grey-text text-darken-3">Log In</h5>
+          <h5 className="grey-text text-darken-3">Sign Up</h5>
           <div className="input-field">
             <label htmlFor="username">Username</label>
             <input
@@ -60,7 +60,7 @@ class LoginPage extends Component {
             id="login-button"
             type="submit"
           >
-            Log In
+            Create Account
           </button>
           <div className="center red-text"></div>
         </form>
@@ -87,4 +87,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
